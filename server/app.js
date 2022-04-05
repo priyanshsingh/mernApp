@@ -8,6 +8,14 @@ require('./db/conn');
 
 const PORT = process.env.PORT;
 
+// We can use the userSchema from the following code
+// const User = require('./model/userSchema');
+
+
+// We can link the routes with the main app.js file by putting them in another file
+app.use(require('./router/auth'));
+
+
 // Middlewares -> User cannot access about section without sigining in, so the server 
 // redirects user to the signin page instead of going to the about page
 
@@ -19,7 +27,7 @@ const middleware = (req, res, next)=> {
 
 // Routing to varios pages
 app.get('/', (req, res)=>{
-    res.send(`Hello World from server`);
+    res.send(`Hello World from server app.js`);
 });
 
 app.get('/about', middleware,(req, res)=>{
