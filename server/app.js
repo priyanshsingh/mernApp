@@ -8,7 +8,7 @@ require('./db/conn');
 
 const PORT = process.env.PORT;
 
-// We can use the userSchema from the following code
+// We can use the userSchema from the following  code
 // const User = require('./model/userSchema');
 
 
