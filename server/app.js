@@ -8,6 +8,9 @@ require('./db/conn');
 
 const PORT = process.env.PORT;
 
+// the json code can be read
+app.use(express.json());
+
 // We can use the userSchema from the following  code
 // const User = require('./model/userSchema');
 

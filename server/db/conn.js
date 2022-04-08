@@ -8,6 +8,5 @@ mongoose.connect(DB).then(()=>{
     useCreateIndex: true;
     useUnifiedTopology: true;
     useFindAndModify: false
-
     console.log(`Connetion with database established`);
 }).catch((err) => console.log(`No connection from DB`));
